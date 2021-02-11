@@ -7,12 +7,53 @@
     <title>БухБизнес</title>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/responsive.css" />
+
+    <!-- Facebook Pixel Code -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js"
+      );
+      fbq("init", "1875225942628974");
+      fbq("track", "PageView");
+
+      fbq("track", "Lead");
+      fbq("track", "SubmitApplication");
+    </script>
+    <noscript>
+      <img
+        height="1"
+        width="1"
+        src="https://www.facebook.com/tr?id=1875225942628974&ev=PageView
+  &noscript=1"
+      />
+    </noscript>
+    <!-- End Facebook Pixel Code -->
   </head>
 
   <body>
     <div class="wrapper">
       <div class="corner-header">
-        <img src="images/ball.png" alt="" />
+        <img src="images/ball.webp" alt="" />
       </div>
 
       <header>
@@ -22,10 +63,12 @@
           по налогам
         </h1>
         <p>Как сдать НДС?</p>
+        <p>Как рассчитать Прибыль?</p>
+        <p>Какой режим УСН выгоднее?</p>
       </header>
       <section class="author">
         <div class="picture">
-          <img src="../images/1.jpg" alt="Космачева Т.В." />
+          <img src="images/1.webp" alt="Космачева Т.В." />
           <p>Космачева</p>
           <p>Татьяна Викторовна</p>
         </div>
@@ -58,7 +101,7 @@
           </ul>
         </div>
       </section>
-      <section class="price" id="tariff">
+      <section class="price" id="3">
         <div class="price-items">
           <div class="base">
             <div class="tarif">Пакет "Базовый"</div>
@@ -99,7 +142,7 @@
         <div class="fragment-block">
           <div class="block1">
             <p>1. Как правильно рассчитать <br />НДС для предприятия...</p>
-            <video width="auto" controls="controls">
+            <video controls>
               <source src="video/video1.mp4" type="video/mp4" />
             </video>
           </div>
@@ -108,7 +151,7 @@
               2. Основные налоговые <br />
               ограничения в 2021 году...
             </p>
-            <video width="auto" controls="controls">
+            <video controls>
               <source src="video/video2.mp4" type="video/mp4" />
             </video>
           </div>
@@ -119,21 +162,23 @@
 
         <div class="feedback-text">
           <div class="one">
-            <img src="images/lena.png" alt="" />
+            <img src="images/lena.webp" alt="" />
             <h3>
               Елена Максимова, <br />
               бухгалтер-экономист
             </h3>
             <p>
               <i
-                >" Работаю в сфере бухучета и финансов продолжительное время.
-                Необходимо было получить дополнительные навыки для перехода на
-                следующую ступень..."</i
+                >" Попала к такому прекрасному человеку на обучение! Теперь
+                бухучет мне под силу, я уже начала работать, эта профессия
+                востребованная сейчас, много предпринимателей нуждаются в
+                помощи. К тому же можно ведь на дому работать. Без отрыва от
+                семьи)"</i
               >
             </p>
           </div>
           <div class="two">
-            <img src="images/Olya.png" alt="" />
+            <img src="images/Olya.webp" alt="" />
             <h3>
               Илона Золина, <br />
               владелец частного бизнеса
@@ -147,7 +192,7 @@
             </p>
           </div>
           <div class="three">
-            <img src="images/katya.png" alt="" />
+            <img src="images/katya.webp" alt="" />
             <h3>
               Светлана Юмашева, <br />
               бухгалтер
@@ -192,13 +237,14 @@
           <input
             type="text"
             name="user_email"
-            placeholder="Электронная почта"
+            placeholder="me@example.com"
             required
           />
           <input type="submit" value="Регистрация на курс" />
           <input
             type="button"
             value="Получить программу"
+            onClick="window.open('program.html')"
           />
         </form>
       </section>
