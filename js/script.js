@@ -32,8 +32,9 @@
 
 // === BEGIN inputMaskPhone ====/
 
-const inputs = document.querySelectorAll('input[type="tel"]');
-const im = new Inputmask("+7(999) 999-99-99");
+var inputs = document.querySelectorAll('input[type="tel"]');
+
+var im = new Inputmask("+7(999) 999-99-99");
 im.mask(inputs);
 
 // === END inputMaskPhone ====/
@@ -47,7 +48,7 @@ function tarifPlan() {
       localStorage.setItem("tarif", data);
       scrollDown();
       setTimeout(popMessage, 1000);
-      setTimeout(delWindow, 4000);
+      setTimeout(delWindow, 3000);
     });
     clearTimeout(popMessage);
   }
@@ -90,11 +91,19 @@ function delWindow() {
   }, 2000);
 }
 
-
-let form = document.getElementsByTagName('form')[0];
-let data = document.getElementsByName('data')[0];
-form.addEventListener('submit', (e) => {
-e.preventDefault();
-data = localStorage.getItem('tarif');
-form.submit();
+let form = document.getElementsByTagName("form")[0];
+let data = document.getElementsByName("data")[0];
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  data.value = localStorage.getItem("tarif");
+  form.submit();
+  cleanInputs();
+  window.localStorage.removeItem("tarif");
 });
+
+function cleanInputs() {
+  const filledInputs = document.querySelectorAll("input");
+  for (let i = 3; i >= 0; i--) {
+    filledInputs[i].value = "";
+  }
+}
