@@ -1,5 +1,4 @@
-@import "https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Roboto&display=swap";
-
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Roboto&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -8,6 +7,14 @@
 body {
   background-color: #30c67e;
   font-family: "Roboto", sans-serif;
+}
+
+body section.theory .wrapper .advance div {
+  display: block;
+}
+
+body section.theory .wrapper .advance div p:first-of-type {
+  text-align: center;
 }
 
 .wrapper {
@@ -45,11 +52,11 @@ body {
 
 .wrapper h3,
 .wrapper div {
-  margin: 30px 0 20px;
+  margin: 30px 0 5px;
 }
 
 .wrapper p {
-  font-weight: 700;
+  font-weight: bold;
   font-size: 2vw;
 }
 
@@ -61,32 +68,57 @@ body {
 .wrapper .two .item,
 .wrapper .three .item,
 .wrapper .four .item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  margin-bottom: 0;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 0%;
 }
 
 .wrapper .one .item div,
 .wrapper .two .item div,
 .wrapper .three .item div,
 .wrapper .four .item div {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: 700;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: bold;
   font-size: 1.5rem;
   min-width: 50px;
   height: 50px;
   background-color: #30c67e;
-  border-radius: 50%;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
   color: #fff;
   margin-right: 10px;
 }
 
 .wrapper .advance {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .wrapper .advance p {
@@ -106,12 +138,10 @@ body {
 
 .wrapper .advance span {
   color: #30c67e;
-  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
   font-size: 4em;
-}
-
-section.theory .wrapper .advance div {
-  display: block;
 }
 
 section.practice {
@@ -119,25 +149,26 @@ section.practice {
 }
 
 section.practice .advance div {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 section.consult {
   margin-top: 10px;
 }
 
-section.consult .advance a {
-  display: flex;
-  text-decoration: none;
-  align-items: center;
-  border-radius: 5px;
-  padding: 10px;
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-}
-
-section.consult .advance a p:last-of-type {
+section.consult .advance p:last-of-type {
   color: #000;
 }
 
@@ -145,7 +176,6 @@ section.consult .advance a p:last-of-type {
   body {
     padding: 0 5%;
   }
-
   body li {
     font-size: 2vw;
   }
@@ -155,31 +185,25 @@ section.consult .advance a p:last-of-type {
   body .wrapper h1 {
     font-size: 6vw;
   }
-
   body .wrapper h2 {
     font-size: 5vw;
   }
-
   body .wrapper h3,
   body .wrapper p {
     font-size: 1rem;
   }
-
   body .wrapper li {
     font-size: 1rem;
   }
-
   body .wrapper div :not(:last-child) {
     margin-top: 0;
   }
-
   body .wrapper .one .item,
   body .wrapper .two .item,
   body .wrapper .three .item,
   body .wrapper .four .item {
     display: block;
   }
-
   body .wrapper .one .item div,
   body .wrapper .two .item div,
   body .wrapper .three .item div,
@@ -193,16 +217,14 @@ section.consult .advance a p:last-of-type {
   body .wrapper li {
     font-size: 12px;
   }
-
   body .wrapper .advance a span {
     font-size: 2em;
   }
-
   body .wrapper .advance a p {
     font-size: 4vw;
   }
-
   body section.theory .wrapper .advance div {
     display: block;
   }
 }
+/*# sourceMappingURL=program.css.map */

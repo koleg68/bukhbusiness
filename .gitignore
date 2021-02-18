@@ -1,2 +1,8 @@
 *.scss
-*css.map
+*.css.map
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.mp4
+*.DS_Store
