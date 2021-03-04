@@ -32,9 +32,9 @@
 
 // === BEGIN inputMaskPhone ====/
 
-var inputs = document.querySelectorAll('input[type="tel"]');
+const inputs = document.querySelectorAll("input[type='tel']");
 
-var im = new Inputmask("+7(999) 999-99-99");
+const im = new Inputmask("+7(999) 999-99-99");
 im.mask(inputs);
 
 // === END inputMaskPhone ====/
@@ -75,7 +75,6 @@ function scrollDown() {
 function popMessage() {
   const div = document.createElement("div"),
     form = document.querySelector("form");
-
   div.classList.add("tariff-plan");
   div.innerHTML = `Вы выбрали тарифный план <br> ${localStorage.getItem(
     "tarif"
@@ -84,10 +83,10 @@ function popMessage() {
 }
 
 function delWindow() {
-  const div = document.querySelector("div.tariff-plan");
+  const div = document.querySelector(".tariff-plan");
   div.classList.add("hide-tariff-plan");
   setTimeout(function () {
-    div.parentNode.removeChild(div);
+    div.remove(div);
   }, 2000);
 }
 
@@ -107,3 +106,20 @@ function cleanInputs() {
     filledInputs[i].value = "";
   }
 }
+
+function selectTarif() {
+  const inputs = document.querySelectorAll(".select-tarif");
+  for (let i of inputs) {
+    i.addEventListener("input", () => {
+      if (localStorage.getItem("tarif") === null) {
+        const div = document.createElement("div");
+        div.classList.add("tariff-plan");
+        div.innerHTML = "Нужно выбрать тарифный план";
+        form.appendChild(div);
+        cleanInputs();
+        delWindow();
+      }
+    });
+  }
+}
+selectTarif();
