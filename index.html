@@ -228,19 +228,18 @@
       <section class="registration">
         <form action="mail.php" method="POST">
           <input type="hidden" name="data" />
-          <input type="text" name="user_name" placeholder="Имя" required />
+          <input type="text" name="user_name" placeholder="Имя" required class="select-tarif"/>
           <input
             type="tel"
             name="user_phone"
             placeholder="+7 (999) 999-99-99"
-            required
-          />
+            required class="select-tarif"/>
           <input
             type="text"
             name="user_email"
             placeholder="me@example.com"
             required
-          />
+          class="select-tarif"/>
           <input type="submit" value="Регистрация на курс" />
           <input
             type="button"
